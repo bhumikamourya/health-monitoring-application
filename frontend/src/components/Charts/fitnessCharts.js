@@ -7,10 +7,10 @@ function WaterChart({ days = 7, target = 8 }) {
   const { data, todayTotal, avg } = useChartData("water", "water", days);
 
   const getWaterColor = (value, target) => {
-    if (value < target * 0.5) return "#ef4444";   // 🔴 Red - very low hydration
-    if (value < target * 0.8) return "#8cb5f7ff"; // 🟠 Light blue - low
-    if (value < target) return "#facc15";         // 🟡 Yellow - almost there
-    return "#3b82f6";                             // 🔵 Blue - good hydration
+    if (value < target * 0.5) return "#ef4444";   // very low hydration
+    if (value < target * 0.8) return "#8cb5f7ff"; //low
+    if (value < target) return "#facc15";         // almost there
+    return "#3b82f6";                             // good hydration
   };
 
   const coloredData = data.map(d => ({
