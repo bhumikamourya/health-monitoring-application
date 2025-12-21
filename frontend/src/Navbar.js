@@ -41,13 +41,6 @@ function Navbar() {
               Blog
             </Link>
             <Link
-              to="/pricing"
-              onClick={() => handleMenuClick(3)}
-              className={`${selectedMenu === 3 ? activeMenuClass : menuClass} hover:text-green-300`}
-            >
-              Pricing
-            </Link>
-            <Link
               to="/pomodoro"
               onClick={() => handleMenuClick(4)}
               className={`${selectedMenu === 4 ? activeMenuClass : menuClass}  hover:text-green-300`}

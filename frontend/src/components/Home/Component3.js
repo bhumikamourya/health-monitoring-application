@@ -7,7 +7,7 @@ function Component3() {
         Take control of your habits
       </h1>
       <p className="text-base md:text-lg mt-3 text-center max-w-2xl mx-auto text-gray-700">
-        Start building powerful habits for free, or unlock complete control with
+        Start building powerful habits for free with
         our lifetime plan. No subscriptions, no hidden fees.
       </p>
 
@@ -47,7 +47,7 @@ function Component3() {
           </div>
         </div>
 
-        {/* Master Card */}
+        {/* Master Card
         <div className="flex-1 max-w-sm rounded-xl shadow-md p-6  relative coloured-card">
           <div className="text-center font-semibold uppercase tracking-wide complete-control-text">
             Complete Control
@@ -82,15 +82,15 @@ function Component3() {
               Unlock Full Control
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Footer Note */}
-      <p className="text-center mt-6 text-xs text-gray-600 max-w-xl mx-auto">
+      {/* <p className="text-center mt-6 text-xs text-gray-600 max-w-xl mx-auto">
         If you can not afford the app but still would like premium access for
         your own journey, send us an email here letting us know your situation
         and we'll gift you a membership
-      </p>
+      </p> */}
     </div>
   );
 }

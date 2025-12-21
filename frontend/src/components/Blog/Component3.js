@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useProtectedNavigate } from "../../utils/useProtectedNavigate.js";
 
 function Component3() {
+     const protectedNavigate = useProtectedNavigate();
+    
+      const handleStart = () => {
+        protectedNavigate("/seedemo"); // will check token internally
+      };
     return (
         <>
             <div className="py-10 px-5">
@@ -13,13 +18,11 @@ function Component3() {
                     </p>
 
                     <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link to={"/login"}>
-                            <button className="coloured-btn px-6 py-2 rounded-md">
+                            <button className="coloured-btn px-6 py-2 rounded-md" onClick={handleStart}>
                                 Start Building Habits
                             </button>
-                        </Link>
                         <button className="border border-gray-400 text-gray-700 hover:bg-gray-100 px-6 py-2 rounded-md">
-                            Learn More About Habitualy
+                            Learn More About Health Tracker
                         </button>
                     </div>
                 </div>

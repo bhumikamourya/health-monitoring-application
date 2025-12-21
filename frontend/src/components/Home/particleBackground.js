@@ -1,8 +1,14 @@
 import React from 'react';
 import './particleBackground.css';
-import {Link} from "react-router-dom";
+import { useProtectedNavigate } from "../../utils/useProtectedNavigate.js";
+import { Link } from 'react-router-dom';
 
 function ParticleBackground() {
+   const protectedNavigate = useProtectedNavigate();
+
+  const handleStart = () => {
+    protectedNavigate("/seedemo"); // will check token internally
+  };
     return ( 
         <>
     <div class="particles-container">
@@ -54,11 +60,10 @@ function ParticleBackground() {
       Visualize Now
     </button>
 
-    <Link to="/login">
-      <button className="px-6 py-3 rounded-lg border border-gray-400 text-gray-700 hover:bg-gray-800 hover:text-white transition home-btn2">
+    
+      <button className="px-6 py-3 rounded-lg border border-gray-400 text-gray-700 hover:bg-gray-800 hover:text-white transition home-btn2" onClick={handleStart}>
         See Demo
       </button>
-    </Link>
   </div>
 
   <div className="mt-6">

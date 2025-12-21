@@ -1,15 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useProtectedNavigate } from "../../utils/useProtectedNavigate.js";
 
 function Component4() {
-  const navigate = useNavigate();
+  const protectedNavigate = useProtectedNavigate();
 
   const handleStart = () => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      navigate("/seedemo"); // already loggedIn user → dashboard
-    } else {
-      navigate("/login"); // not loggedIn user → login page
-    }
+    protectedNavigate("/seedemo"); // will check token internally
   };
 
   return (
@@ -21,7 +16,7 @@ function Component4() {
 
         <p className="fs-5 mt-4 text-lg text-gray-600">
           Join thousands of people who have improved their productivity,
-          health, and well-being with Habitualy.
+          health, and well-being with Health Tracker.
         </p>
 
         <p className="fs-6 mt-6 text-base text-gray-700 flex flex-col md:flex-row items-center justify-center gap-3">
