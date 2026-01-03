@@ -7,7 +7,7 @@ A full-stack web application to track daily health metrics like water intake, ca
 - Backend: Node.js, Express
 - DataBase: MongoDB
 
-##Features
+## Features
 - User Authentication
 - Manual health tracking
 - Dashboard with charts
